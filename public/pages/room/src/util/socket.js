@@ -20,9 +20,8 @@ class SocketBuilder {
       withCredentials: false,
     });
 
-    socket.one("user-connected", this.onUserConnected);
-    socket.one("user-disconnected", this.onUserDisconnected);
-
+    socket.on("user-connected", this.onUserConnected);
+    socket.on("user-disconnected", this.onUserDisconnected);
     return socket;
   }
 }
